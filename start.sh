@@ -29,8 +29,8 @@ cp -rn "$BACKUP_DIR"/* "$DATA_DIR/" 2>/dev/null || true
 # --- 3. 后台定时备份任务 ---
 (
   while true; do
-    # 每 10 分钟运行一次 (600秒)
-    sleep 600
+    # 每 2 分钟运行一次 (120秒)
+    sleep 120
     echo ">>> Starting scheduled backup..."
 
     # 进入备份目录
