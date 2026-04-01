@@ -41,7 +41,7 @@ After the first deploy, configure your bot normally. Wait ~3 minutes for the fir
 
 一个简单的方案，解决 AstrBot（或其他使用 SQLite 数据库的聊天机器人）部署在 Render 等云平台时，每次重启数据丢失的问题。
 
-**原理：** 后台脚本每10分钟自动将 `data/` 目录（人设、记忆、插件）备份到你的私有 GitHub repo，每次重启时自动拉取恢复。
+**原理：** 后台脚本每2分钟自动将 `data/` 目录（人设、记忆、插件）备份到你的私有 GitHub repo，每次重启时自动拉取恢复。
 
 ---
 
@@ -66,4 +66,4 @@ GitHub → Settings → Developer settings → Personal access tokens → Tokens
 在 Render 中将服务改为从公开 repo 构建，而不是使用官方 Docker 镜像。
 
 **第六步：首次使用**
-第一次部署后，正常配置好你的机器人。等约10分钟让第一次备份推送到私有 repo，去私有 repo 检查是否有文件出现即可确认备份正常工作。
+第一次部署后，正常配置好你的机器人。等约3分钟让第一次备份推送到私有 repo，去私有 repo 检查是否有文件出现即可确认备份正常工作。
