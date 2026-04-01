@@ -6,7 +6,7 @@
 
 A simple solution to persist AstrBot (or any chatbot with a SQLite database) data when deployed on cloud platforms like Render, which reset the filesystem on every restart.
 
-**How it works:** A background script automatically backs up the `data/` directory (personas, memory, plugins) to your private GitHub repo every 10 minutes. On each restart, the data is pulled back automatically.
+**How it works:** A background script automatically backs up the `data/` directory (personas, memory, plugins) to your private GitHub repo every 2 minutes. On each restart, the data is pulled back automatically.
 
 > AstrBot repo: https://github.com/astrbotdevs/astrbot
 
@@ -33,7 +33,7 @@ Add these 3 variables to your web service:
 In Render, set your service to build from the public repo instead of using the official Docker image.
 
 **Step 6: First-time setup**
-After the first deploy, configure your bot normally. Wait ~10 minutes for the first backup to push to your private repo. You can verify by checking if files appear there.
+After the first deploy, configure your bot normally. Wait ~3 minutes for the first backup to push to your private repo. You can verify by checking if files appear there.
 
 ---
 
